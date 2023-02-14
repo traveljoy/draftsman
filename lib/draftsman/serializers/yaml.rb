@@ -6,7 +6,7 @@ module Draftsman
       extend self # makes all instance methods become module methods as well
 
       def load(string)
-        YAML.load string, permitted_classes: [Date, Time], aliases: true
+        YAML.load string, permitted_classes: [Date, Time, BigDecimal], aliases: true
       end
 
       def dump(object)
