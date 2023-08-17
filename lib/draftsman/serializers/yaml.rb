@@ -6,11 +6,7 @@ module Draftsman
       extend self # makes all instance methods become module methods as well
 
       def load(string)
-        if RUBY_VERSION.start_with?('3.')
-          YAML.load string, permitted_classes: [Date, Time, BigDecimal], aliases: true
-        else
-          YAML.load string
-        end
+        YAML.load string
       end
 
       def dump(object)
