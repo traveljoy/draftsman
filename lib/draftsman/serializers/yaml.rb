@@ -11,7 +11,6 @@ module Draftsman
         else
           YAML.load string
         end
-        YAML.load string
       end
 
       def dump(object)
