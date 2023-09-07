@@ -7,7 +7,7 @@ module Draftsman
 
       def load(string)
         if at_least_ruby_3_1?
-          YAML.load string, permitted_classes: [Date, Time, BigDecimal, ActiveSupport::TimeWithZone], aliases: true
+          YAML.load string, permitted_classes: [Date, Time, BigDecimal, ActiveSupport::TimeWithZone, ActiveSupport::TimeZone], aliases: true
         else
           YAML.load string
         end
